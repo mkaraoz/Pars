@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto"
+                                             xmlns:fancy="http://schemas.android.com/apk/res-auto"
+                                             xmlns:tools="http://schemas.android.com/tools"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="match_parent"
+                                             android:background="@color/md_black_1000"
+                                             tools:context="com.mk.imgur.uploder.EditProfileActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/train"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:layout_marginTop="24dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_image"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/user"
+        app:civ_border_color="@color/md_grey_600"
+        app:civ_border_width="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@+id/imageView"/>
+
+    <com.github.clans.fab.FloatingActionButton android:id="@+id/fab_edit_user_photo"
+                                               xmlns:fab="http://schemas.android.com/apk/res-auto"
+                                               android:layout_width="wrap_content"
+                                               android:layout_height="wrap_content"
+                                               android:src="@drawable/ic_camera_black_18dp"
+                                               fab:fab_colorNormal="@color/md_grey_400"
+                                               fab:fab_colorPressed="@color/md_grey_600"
+                                               fab:fab_colorRipple="@color/md_grey_800"
+                                               fab:fab_size="mini"
+                                               fab:layout_constraintBottom_toBottomOf="@+id/imageView"
+                                               fab:layout_constraintEnd_toEndOf="parent"/>
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/input_met_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="30dp"
+        android:hint="Name"
+        android:inputType="text"
+        android:text="Ali DESIDERO"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:met_baseColor="@color/md_white_1000"
+        app:met_errorColor="#ddaa00"
+        app:met_floatingLabel="normal"
+        app:met_floatingLabelText="Name"
+        app:met_primaryColor="@color/colorAccent"/>
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/input_met_username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="30dp"
+        android:hint="Username"
+        android:inputType="text"
+        android:maxLines="1"
+        android:text="desidero"
+        app:layout_constraintTop_toBottomOf="@+id/input_met_name"
+        app:met_baseColor="@color/md_white_1000"
+        app:met_errorColor="#ddaa00"
+        app:met_floatingLabel="normal"
+        app:met_floatingLabelText="Username"
+        app:met_primaryColor="@color/colorAccent"/>
+
+    <mehdi.sakout.fancybuttons.FancyButton
+        android:id="@+id/btn_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:layout_marginTop="5dp"
+        android:fontFamily="sans-serif-condensed"
+        android:paddingBottom="3dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="3dp"
+        app:layout_constraintEnd_toEndOf="@+id/toolbar"
+        app:layout_constraintTop_toTopOf="@+id/toolbar"
+        fancy:fb_defaultColor="@android:color/transparent"
+        fancy:fb_focusColor="@color/md_grey_500"
+        fancy:fb_iconPosition="left"
+        fancy:fb_text="SAVE"
+        fancy:fb_textColor="@color/md_white_1000"/>
+
+
+</android.support.constraint.ConstraintLayout>

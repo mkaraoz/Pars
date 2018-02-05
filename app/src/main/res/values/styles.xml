@@ -1,0 +1,41 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="FirstScreenTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="colorControlNormal">@color/md_white_1000</item>
+        <item name="colorControlHighlight">#FFF</item>
+    </style>
+
+    <style name="EditProfileTheme" parent="FirstScreenTheme">
+        <item name="android:homeAsUpIndicator">@drawable/ic_cancel_white_36dp</item>
+        <item name="android:textColorHint">@color/md_blue_grey_100</item>
+    </style>
+
+    <style name="MaterialTextBoxStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginEnd">8dp</item>
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="layout_constraintStart_toStartOf">parent</item>
+        <item name="layout_constraintHorizontal_bias">0.0</item>
+        <item name="layout_constraintEnd_toEndOf">parent</item>
+        <item name="met_baseColor">@color/md_grey_400</item>
+        <item name="met_iconPadding">0dp</item>
+        <item name="met_primaryColor">#FFAB00</item>
+        <item name="met_textColor">@color/md_white_1000</item>
+        <item name="met_textColorHint">@color/md_grey_400</item>
+        <item name="met_underlineColor">@color/md_grey_400</item>
+    </style>
+
+</resources>

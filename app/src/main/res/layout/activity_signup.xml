@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/md_black_1000"
+    tools:context=".SignupActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:layout_marginTop="24dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
+        android:id="@+id/iv_background_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/a2b"
+        android:contentDescription="blurry image"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/et_full_name"
+        style="@style/MaterialTextBoxStyle"
+        android:hint="@string/label_full_name"
+        android:inputType="text"
+        android:maxLines="1"
+        app:layout_constraintTop_toBottomOf="@+id/profile_image"
+        app:met_iconLeft="@drawable/ic_account_white_24dp"/>
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/et_user_name"
+        style="@style/MaterialTextBoxStyle"
+        android:hint="@string/label_username"
+        android:inputType="text"
+        android:maxLines="1"
+        app:layout_constraintTop_toBottomOf="@+id/et_full_name"
+        app:met_iconLeft="@drawable/ic_at_white_24dp"/>
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/et_email"
+        style="@style/MaterialTextBoxStyle"
+        android:hint="@string/label_email"
+        android:inputType="textEmailAddress"
+        app:layout_constraintTop_toBottomOf="@+id/et_user_name"
+        app:met_iconLeft="@drawable/ic_email_outline_white_24dp"/>
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/et_password"
+        style="@style/MaterialTextBoxStyle"
+        android:hint="@string/label_password"
+        android:inputType="textPassword"
+        app:layout_constraintTop_toBottomOf="@+id/et_email"
+        app:met_iconLeft="@drawable/ic_lock_outline_white_24dp"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_image"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="70dp"
+        android:src="@drawable/user"
+        app:civ_border_color="@color/md_grey_600"
+        app:civ_border_width="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/iv_background_image"/>
+
+    <com.github.clans.fab.FloatingActionButton
+        xmlns:fab="http://schemas.android.com/apk/res-auto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="85dp"
+        android:layout_marginTop="70dp"
+        android:src="@drawable/ic_camera_black_18dp"
+        fab:fab_colorNormal="@color/md_grey_400"
+        fab:fab_colorPressed="@color/colorAccent"
+        fab:fab_colorRipple="@color/md_amber_A400"
+        fab:fab_size="mini"
+        fab:layout_constraintBottom_toBottomOf="@+id/profile_image"
+        fab:layout_constraintEnd_toEndOf="@+id/profile_image"
+        fab:layout_constraintStart_toStartOf="@+id/profile_image"
+        fab:layout_constraintTop_toTopOf="@+id/profile_image"/>
+
+    <mehdi.sakout.fancybuttons.FancyButton
+        xmlns:fancy="http://schemas.android.com/apk/res-auto"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:paddingBottom="10dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="10dp"
+        fancy:fb_borderColor="@color/md_blue_grey_100"
+        fancy:fb_borderWidth="0dp"
+        fancy:fb_defaultColor="@color/colorAccent"
+        fancy:fb_focusColor="@color/md_grey_800"
+        fancy:fb_iconPosition="left"
+        fancy:fb_text="Create User"
+        fancy:fb_textColor="@color/md_black_1000"
+        fancy:layout_constraintBottom_toBottomOf="@+id/iv_background_image"
+        fancy:layout_constraintEnd_toEndOf="parent"
+        fancy:layout_constraintStart_toStartOf="parent"/>
+
+</android.support.constraint.ConstraintLayout>

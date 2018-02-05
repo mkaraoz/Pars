@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WelcomeActivity">
+
+    <TextView
+        android:paddingTop="36dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:text="Will display uploaded images"
+        android:textColor="@color/md_white_1000"
+        app:layout_constraintEnd_toEndOf="@+id/rv_uploaded_images"
+        app:layout_constraintStart_toStartOf="@+id/rv_uploaded_images"/>
+
+    <com.github.clans.fab.FloatingActionMenu
+        android:id="@+id/fab_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        fab:layout_constraintBottom_toBottomOf="@+id/rv_uploaded_images"
+        fab:layout_constraintEnd_toEndOf="parent"
+        fab:menu_colorNormal="@color/colorAccent"
+        fab:menu_colorPressed="@color/md_orange_700"
+        fab:menu_colorRipple="@color/md_blue_grey_900"
+        fab:menu_icon="@drawable/ic_cloud_upload_white_24dp">
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/fab_item_select_file"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_collections_white_18dp"
+            fab:fab_colorNormal="@color/colorAccent"
+            fab:fab_label="Select photo"
+            fab:fab_size="mini"
+            fab:menu_colorPressed="@color/md_orange_700"
+            fab:menu_colorRipple="@color/md_blue_grey_900"/>
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/fab_item_take_photo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_camera_alt_white_18dp"
+            fab:fab_colorNormal="@color/colorAccent"
+            fab:fab_label="Camera"
+            fab:fab_size="mini"
+            fab:menu_colorPressed="@color/md_orange_700"
+            fab:menu_colorRipple="@color/md_blue_grey_900"/>
+
+    </com.github.clans.fab.FloatingActionMenu>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_uploaded_images"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+</android.support.constraint.ConstraintLayout>
+
+    <!--<com.github.clans.fab.FloatingActionButton-->
+    <!--android:id="@+id/fab"-->
+    <!--xmlns:fab="http://schemas.android.com/apk/res-auto"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginBottom="8dp"-->
+    <!--android:layout_marginEnd="8dp"-->
+    <!--android:src="@drawable/ic_cloud_upload_white_24dp"-->
+    <!--fab:fab_colorNormal="@color/colorAccent"-->
+    <!--fab:fab_colorPressed="@color/md_orange_700"-->
+    <!--fab:fab_colorRipple="@color/md_blue_grey_900"-->
+    <!--fab:fab_size="normal"-->
+    <!--fab:layout_constraintBottom_toBottomOf="@+id/rv_uploaded_images"-->
+    <!--fab:layout_constraintEnd_toEndOf="parent"-->
+    <!--fab:layout_constraintStart_toStartOf="@+id/profile_image"-->
+    <!--fab:layout_constraintTop_toTopOf="@+id/profile_image"/>-->
